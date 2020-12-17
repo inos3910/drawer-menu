@@ -1,0 +1,27 @@
+.l-main{
+  margin-top: 90px;
+  @include min-screen($bp_tb_v){
+  }
+  @include min-screen($bp_base){
+  }
+
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px 90px;
+    @include min-screen($bp_tb_v){
+      padding: 0 0 90px;
+    }
+    @include min-screen($bp_base){
+    }
+
+    p{
+      font-size: 15px;
+    }
+  }
+
+  .is-menu-active & {
+    pointer-events: none;
+  }
+}
