@@ -3,10 +3,6 @@
   font-size: 15px;
   color:#fff;
   background: $dgray;
-  @include min-screen($bp_tb_v){
-  }
-  @include min-screen($bp_base){
-  }
 
   &__inner{
     padding: 90px 0;

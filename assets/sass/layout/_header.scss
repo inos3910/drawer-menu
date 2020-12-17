@@ -6,11 +6,6 @@
   width: 100%;
   background: #fff;
   box-shadow: $boxshadow1;
-  @include min-screen($bp_tb_v){
-  }
-
-  @include min-screen($bp_base){
-  }
 
   &__inner{
     display: flex;
@@ -20,9 +15,6 @@
     padding-left: 15px;
     @include min-screen($bp_tb_v){
       padding-left: 0;
-    }
-
-    @include min-screen($bp_base){
     }
   }
 

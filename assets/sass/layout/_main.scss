@@ -1,9 +1,5 @@
 .l-main{
   margin-top: 90px;
-  @include min-screen($bp_tb_v){
-  }
-  @include min-screen($bp_base){
-  }
 
   &__inner{
     display: flex;
@@ -12,8 +8,6 @@
     padding: 0 15px 90px;
     @include min-screen($bp_tb_v){
       padding: 0 0 90px;
-    }
-    @include min-screen($bp_base){
     }
 
     p{

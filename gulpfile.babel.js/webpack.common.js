@@ -23,12 +23,12 @@ module.exports = {
     encoding: 'utf-8'
   }),
   new webpack.ProvidePlugin({
-    $                : 'jquery/dist/jquery',
-    jQuery           : 'jquery/dist/jquery',
-    objectFitImages  : 'object-fit-images',
-    anime            : ['animejs/lib/anime.es.js', 'default'],
+    // $                : 'jquery/dist/jquery',
+    // jQuery           : 'jquery/dist/jquery',
+    // objectFitImages  : 'object-fit-images',
+    // anime            : ['animejs/lib/anime.es.js', 'default'],
     //lazySizes        : 'lazysizes',
-    picturefill      : 'picturefill',
+    // picturefill      : 'picturefill',
     // Barba            : 'barba.js',
     //Rellax           : 'rellax'
   })

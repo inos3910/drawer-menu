@@ -4,8 +4,6 @@
   @include min-screen($bp_tb_v){
     width: 32%;
   }
-  @include min-screen($bp_base){
-  }
 
   &__visual{
     height: 150px;
@@ -13,26 +11,16 @@
     @include min-screen($bp_tb_v){
       height: 200px;
     }
-    @include min-screen($bp_base){
-    }
   }
 
   &__title{
     margin-top: 9px;
     font-size: 18px;
     line-height: 1.6;
-    @include min-screen($bp_tb_v){
-    }
-    @include min-screen($bp_base){
-    }
   }
 
   &__description{
     font-size: 12px;
     line-height: 1.6;
-    @include min-screen($bp_tb_v){
-    }
-    @include min-screen($bp_base){
-    }
   }
 }
