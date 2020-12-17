@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <title>position:fixed;した要素でtouchイベントが時々反応しなくなる不具合のデモ</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="js-body">
+  <div class="l-cover">
+    <header class="l-header">
+      <div class="l-header__inner u-frame">
+        <h1 class="l-header__logo">LOGO</h1>
+        <button class="l-header__button" type="button" id="js-menu-btn">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+      <!-- /.l-header__inner -->
+      <nav class="c-menu">
+        <div class="c-menu__inner u-frame">
+          <a href="./">HOME</a>
+          <a href="./">ABOUT</a>
+          <a href="./">BLOG</a>
+          <a href="./">CONTACT</a>
+        </div>
+        <!-- /.c-menu__inner -->
+      </nav>
+      <!-- /.c-menu -->
+    </header>
+    <!-- /.l-header -->
+    <main class="l-main">
+      <div class="l-main__inner u-frame">
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 1</div>
+          <div class="c-item__description">Item Description 1.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 2</div>
+          <div class="c-item__description">Item Description 2.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 3</div>
+          <div class="c-item__description">Item Description 3.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 4</div>
+          <div class="c-item__description">Item Description 4.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 5</div>
+          <div class="c-item__description">Item Description 5.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 6</div>
+          <div class="c-item__description">Item Description 6.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 7</div>
+          <div class="c-item__description">Item Description 7.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 8</div>
+          <div class="c-item__description">Item Description 8.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 9</div>
+          <div class="c-item__description">Item Description 9.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 10</div>
+          <div class="c-item__description">Item Description 10.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 11</div>
+          <div class="c-item__description">Item Description 11.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 12</div>
+          <div class="c-item__description">Item Description 12.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 13</div>
+          <div class="c-item__description">Item Description 13.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 14</div>
+          <div class="c-item__description">Item Description 14.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 15</div>
+          <div class="c-item__description">Item Description 15.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 16</div>
+          <div class="c-item__description">Item Description 16.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 17</div>
+          <div class="c-item__description">Item Description 17.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 18</div>
+          <div class="c-item__description">Item Description 18.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 19</div>
+          <div class="c-item__description">Item Description 19.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 20</div>
+          <div class="c-item__description">Item Description 20.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 21</div>
+          <div class="c-item__description">Item Description 21.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 22</div>
+          <div class="c-item__description">Item Description 22.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 23</div>
+          <div class="c-item__description">Item Description 23.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 24</div>
+          <div class="c-item__description">Item Description 24.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 25</div>
+          <div class="c-item__description">Item Description 25.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 26</div>
+          <div class="c-item__description">Item Description 26.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 27</div>
+          <div class="c-item__description">Item Description 27.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 28</div>
+          <div class="c-item__description">Item Description 28.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 29</div>
+          <div class="c-item__description">Item Description 29.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 30</div>
+          <div class="c-item__description">Item Description 30.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 31</div>
+          <div class="c-item__description">Item Description 31.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 32</div>
+          <div class="c-item__description">Item Description 32.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 33</div>
+          <div class="c-item__description">Item Description 33.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 34</div>
+          <div class="c-item__description">Item Description 34.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 35</div>
+          <div class="c-item__description">Item Description 35.</div>
+        </div>
+        <div class="c-item">
+          <div class="c-item__visual"></div>
+          <div class="c-item__title">ITEM 36</div>
+          <div class="c-item__description">Item Description 36.</div>
+        </div>
+      </div>
+      <!-- /.l-main__inner -->
+    </main>
+    <!-- /.l-main -->
+    <footer class="l-footer">
+      <div class="l-footer__inner u-frame">
+        <p>footer</p>
+      </div>
+      <!-- /.l-footer__inner -->
+    </footer>
+    <!-- /.l-footer -->
+  </div>
+  <!-- /.l-cover -->
+  <script src="assets/dist/common.bundle.js" async></script>
+</body>
+
+</html>
