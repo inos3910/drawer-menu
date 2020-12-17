@@ -48,12 +48,6 @@ export class Utils {
     };
   }
 
-  //IE・Edge判定
-  isIE() {
-    const ua = navigator.userAgent.toLowerCase();
-    const isIE = (ua.indexOf('msie') > -1 || ua.indexOf('trident') > -1 || ua.indexOf('edge') > -1);
-    return isIE;
-  }
 }
 
 export default Utils;

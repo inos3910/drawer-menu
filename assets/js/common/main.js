@@ -12,20 +12,6 @@ export class Main extends Utils {
     this.body.classList.toggle('is-menu-active');
   }
 
-  /*
-  * メニュー開く
-  */
-  openMenu() {
-    this.body.classList.add('is-menu-active');
-  }
-
-  /*
-  * メニュー閉じる
-  */
-  closeMenu() {
-    this.body.classList.remove('is-menu-active');
-  }
-
 }
 
 export default Main;
