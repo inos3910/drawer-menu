@@ -1,0 +1,72 @@
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fff;
+  box-shadow: $boxshadow1;
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 15px;
+    @include min-screen($bp_tb_v){
+      padding-left: 0;
+    }
+  }
+
+  &__logo{
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__button{
+    user-select: none;
+    position: relative;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background: $blue;
+
+    .line{
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin: auto;
+      background: #fff;
+      transition: $transition;
+
+      &:nth-child(1){
+        transform:translateY(-6px);
+        .is-menu-active & {
+          transform: rotate(45deg);
+        }
+      }
+
+      &:nth-child(2){
+        .is-menu-active & {
+          opacity: 0;
+        }
+      }
+
+      &:nth-child(3){
+        transform:translateY(6px);
+
+        .is-menu-active & {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+

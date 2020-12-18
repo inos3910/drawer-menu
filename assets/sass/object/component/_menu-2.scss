@@ -1,0 +1,53 @@
+.c-menu{
+  pointer-events:none;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  background: $blue;
+  transition:$transition;
+
+
+  .is-menu-active &{
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__inner{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    padding: 0 30px;
+    transform: translateY(30px);
+    transition:$transition .25s;
+
+    @include min-screen($bp_tb_v){
+      padding: 0;
+    }
+
+    .is-menu-active & {
+      opacity: 1;
+      visibility: visible;
+      transform:none;
+    }
+
+    a{
+      user-select: none;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.6;
+      color: #fff;
+
+      + a{
+        margin-top: 15px;
+      }
+    }
+  }
+}
