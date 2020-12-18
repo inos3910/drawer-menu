@@ -22,7 +22,7 @@ class Events extends Main {
       return;
     }
 
-    $target.addEventListener('click', (e) => {
+    document.addEventListener('click', (e) => {
       if(this.isTouch){
         return;
       }
@@ -39,7 +39,7 @@ class Events extends Main {
       func(e);
     },{passive: false});
 
-    $target.addEventListener('touchstart', (e) => {
+    document.addEventListener('touchstart', (e) => {
       if(!this.isTouch){
         return;
       }
