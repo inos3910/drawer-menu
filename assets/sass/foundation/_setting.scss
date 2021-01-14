@@ -39,6 +39,10 @@ body {
   @media screen\0 {
     font-family: $ie-font;
   }
+
+  &.is-menu-active{
+    overflow: hidden;
+  }
 }
 
 a {

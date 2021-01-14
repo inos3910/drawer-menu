@@ -15,6 +15,7 @@
 
 
   .is-menu-active &{
+    overflow-y: auto;
     pointer-events: auto;
     transform: translateX(-100%);
   }
@@ -25,6 +26,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 90px;
+    margin-bottom: 90px;
     padding: 0 15px;
     transform: translateX(30px);
     transition:$transition .25s;

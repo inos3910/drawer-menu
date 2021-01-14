@@ -11,4 +11,10 @@
   .is-menu-active & {
     pointer-events: none;
   }
+
+  &__back{
+    display: block;
+    margin-bottom: 2em;
+    text-decoration: underline;
+  }
 }
