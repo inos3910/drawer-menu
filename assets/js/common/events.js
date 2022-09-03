@@ -12,15 +12,15 @@ class Events extends Main {
   * @param {Number} func 実行する関数
   */
   touchEventHandler(target, func){
-    const firstLetter = target.slice(0, 1);
-    const isID        = firstLetter === '#';
-    const isClass     = firstLetter === '.';
-    const targetName  = target.slice(1);
-
     const $target = document.querySelector(target);
     if(!$target){
       return;
     }
+
+    const firstLetter = target.slice(0, 1);
+    const isID        = firstLetter === '#';
+    const isClass     = firstLetter === '.';
+    const targetName  = target.slice(1);
 
     document.addEventListener('click', (e) => {
       if(this.isTouch){
@@ -73,8 +73,6 @@ class Events extends Main {
       }
       this.closeMenu();
     });
-
-
   }
 }
 
